@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
+
     <ul id="menu">
         <li>
             <a href="index.html"> Home </a>
@@ -17,36 +18,62 @@
         <li><a href="https://www.youtube.com/@hitgbr/featured" target="_blank">Canal</a></li>
     </ul>
 
-    <h1>Entre em contato comigo</h1>
+    <h1 class="center">Entre em contato comigo</h1>
 
-    <form>
-        <label for="nome">Nome</label> <br>
-        <input type="text" id="nome">
-        <br>
-        <br>
-        <label for="email">Email</label> <br>
-        <input type="email" id="email">
-        <br>
-        <br>
-        <label for="assunto">Assunto</label> <br>
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-        <br>
-        <br>
-        <button>Enviar</button>
-    </form>
+    <div class="container">
+  
+        <form class="start">
+            <label for="nome">Nome</label> <br>
+            <input type="text" id="nome" onkeyup ="validaNome()">
+            <div id="txtNome"></div>
+            <br>
+            <br>
+            <label for="email">Email</label> <br>
+            <input type="email" id="email" onkeyup="validaEmail()">
+            <div id="txtEmail"></div>
+            <br>
+            <br>
+            <label for="assunto">Assunto</label> <br>
+            <textarea name="assunto" id="assunto" cols="30" rows="10" onkeyup="validaAssunto()"></textarea>
+            <div id="txtAssunto"></div>
+            <br>
+            <br>
+            <button onclick="enviar()">Enviar</button>
+        </form>
+        
+    <div>
+        <h2 class="p-30 center">Endereço</h2>
+        <iframe class="p-30" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15802.401009135485!2d-34.8929098!3d-8.0400834!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab19e769b39735%3A0x6d87448ead06e385!2sGeek%20Shop%20Brasil!5e0!3m2!1spt-BR!2sbr!4v1708315910461!5m2!1spt-BR!2sbr" 
+        width="400" 
+        height="400" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy"
+        id="mapa" 
+        referrerpolicy="no-referrer-when-downgrade"
+        onmousemove="mapaZoom()" 
+        onmouseout="mapaNormal()"></iframe>
+    </div>
+        
+    </div>
+    
+    <h3 class="center">Sooou eeeu!!</h3>
 
-    <h2>Endereço</h2>
-
-    <p>Geek Shop Brasil</p>
-    <p>Rua Conselheiro Portela, 665</p>
-
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15802.401009135485!2d-34.8929098!3d-8.0400834!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7ab19e769b39735%3A0x6d87448ead06e385!2sGeek%20Shop%20Brasil!5e0!3m2!1spt-BR!2sbr!4v1708315910461!5m2!1spt-BR!2sbr" 
-    width="400" 
-    height="400" 
-    style="border:0;" 
-    allowfullscreen="" 
-    loading="lazy" 
-    referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="container">
+        <ul id="menu">
+            <li>
+                <a href="https://www.linkedin.com/in/gabriel-luiz-pelo/" target="_blank"> <img class="logo" src="assets/img/linkedin icon.png" alt=""> </a>
+            </li>
+            <li>
+                <a href="https://github.com/GabrielPeloo" target="_blank"> <img class="logo" src="assets/img/github icon.png" alt=""> </a>
+            </li>
+            <li><a href="https://www.instagram.com/gabs_pelo/" target="_blank"> <img class="logo" src="assets/img/insta icon.png" alt=""></a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h4 class="center">Todos os direitos reservados: Gabriel Luiz©</h4>
+    </div>
+    <script src="assets/js/script.js"></script>
 
 </body>
 </html>
